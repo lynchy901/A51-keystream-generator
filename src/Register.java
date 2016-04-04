@@ -56,10 +56,10 @@ public class Register {
     public int getNewStartingBit() {
         int newStartingBit;
 
-        if (xorPositions.length == 4) {
-            newStartingBit = (register[xorPositions[0]]^register[xorPositions[1]]^register[xorPositions[2]]^register[xorPositions[3]]);
-        } else {
-            newStartingBit = (register[xorPositions[0]]^register[xorPositions[1]]);
+        newStartingBit = register[xorPositions[0]];
+        for (int i = 0; i<xorPositions.length - 1; i++) {
+            System.out.println(newStartingBit + ", " + register[xorPositions[i+1]]);
+            newStartingBit = newStartingBit^register[xorPositions[i+1]];
         }
 
         return newStartingBit;

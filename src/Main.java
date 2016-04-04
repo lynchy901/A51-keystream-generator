@@ -2,11 +2,12 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
+
         Register x = new Register(8, new int[]{13, 16, 17, 18}, "1010101010101010101", "X");
         Register y = new Register(10, new int[]{20, 21}, "1100110011001100110011", "Y");
         Register z = new Register(10, new int[]{7, 20, 21, 22}, "11100001111000011110000", "Z");
 
-        int iterations = 3;
+        int iterations = 25;
         String keystream = "";
 
         for (int i = 0; i < iterations; i++) {
